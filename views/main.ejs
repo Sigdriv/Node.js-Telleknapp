@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Hei<x/h1>
+        <p>Hvilken knapp vil du trykke på?</p>
+
+        <% for (let i = 0; i < data.length; i++) { %>
+        <h6><a href="knapp<%=[i + 1]%>">Knapp nr <%=[i + 1]%>?</a> <%= data[i].count %> ganger trykket</h6>
+        <% } %>
+    </div>
+</body>
+</html>
