@@ -7,7 +7,7 @@ app.use(express.urlencoded({extended: false}));
 const dbConnection = require('./lib/db');
 
 app.set('view engine', 'ejs');
-// app.use(express.static('public'));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     dbConnection.query('SELECT * FROM Telleknapp', (err, rows) => {
@@ -66,6 +66,9 @@ app.post('/knapp2', (req, res) => {
         })
     }
 })
+app.get('*', (req, res) => {
+    res.status(404).sendFile(path.join(__dirname, "public/404.html"));
+});
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
