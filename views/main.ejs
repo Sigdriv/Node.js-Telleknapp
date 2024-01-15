@@ -9,10 +9,9 @@
 <body>
     <div>
         <h1>Hei<x/h1>
-        <h2>Vil du trykke på en av mine knapper?</h2>
         <h2>Hvilken knapp vil du trykke på?</h2>
         <% for (let i = 0; i < data.length; i++) { %>
-        <h6><a href="knapp<%=[i + 1]%>">Knapp nr <%=[i + 1]%>?</a> <%= data[i].count %> ganger trykket</h6>
+        <h6 id="knapp<%= [i] %>"><a href="knapp<%=[i + 1]%>">Knapp nr <%=[i + 1]%>?</a> <%= data[i].count %> ganger trykket</h6>
         <% } %>
     </div>
 </body>

@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Hei</h1>
-    <h2>Vil du trykke på en knapp?</h2>
-    <% for (let i = 0; i < data.length; i++) { %>
-        <form action="/knapp1" method="post">
-            <input type="submit" value="Knappen er trykket <%= data[i].count %> ganger"></input>
-        </form>
-    <% } %>
-    <h4><a href="../" style="color: red;">Gå tilbake</a></h4>
+    <div>
+        <h1>Hei</h1>
+        <h2>Vil du trykke på en knapp?</h2>
+        <% for (let i = 0; i < data.length; i++) { %>
+            <form action="/knapp1" method="post">
+                <input type="submit" value="Knappen er trykket <%= data[i].count %> ganger"></input>
+            </form>
+        <% } %>
+        <h4><a href="../" style="color: red;">Gå tilbake</a></h4>
+    </div>
 </body>
 </html>
